@@ -19,7 +19,7 @@ export function Footer() {
               <span className="font-display font-semibold text-lg text-gold-light">VisionTech</span>
             </div>
             <p className="text-sm text-obsidian-steel leading-relaxed mb-4">
-              Nairobi's premier electronics destination. Shop the latest phones, laptops, and accessories with confidence.
+              Nairobi&apos;s premier electronics destination. Shop the latest phones, laptops, and accessories with confidence.
             </p>
             <div className="space-y-2 text-sm text-obsidian-steel">
               <div className="flex items-center gap-2"><MapPin size={14} className="text-gold" /> Nairobi, Kenya</div>

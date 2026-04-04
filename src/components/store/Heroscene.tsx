@@ -32,7 +32,6 @@ export default function HeroScene() {
     renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    //renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.35;
 
@@ -296,14 +295,7 @@ export default function HeroScene() {
     vRight.position.set(0.14, 0.52, SZ + 0.003);
     phoneGroup.add(vRight);
 
-    // "S" — three horizontal bars of decreasing width (simplified S form)
-    const sBars: [number, number, number][] = [
-      [0.18, 0.70, 0.040],   // top bar
-      [0.18, 0.56, 0.040],   // middle bar
-      [0.18, 0.42, 0.040],   // bottom bar
-    ];
-    // Not shown — VS mark is just the V for clarity at this scale.
-    // Instead add a thin "S" letterform as stacked rectangles with offset:
+    // "S" letterform as stacked rectangles with offset:
     phoneGroup.add(ui(0.22, 0.040,  0.085,  0.70,  0xc8a550, 1.4)); // S top
     phoneGroup.add(ui(0.22, 0.040,  0.065,  0.56,  0xc8a550, 1.4)); // S mid
     phoneGroup.add(ui(0.22, 0.040,  0.085,  0.42,  0xc8a550, 1.4)); // S bot

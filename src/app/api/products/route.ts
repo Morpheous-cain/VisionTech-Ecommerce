@@ -46,7 +46,8 @@ export async function GET(req: NextRequest) {
     if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
     return NextResponse.json({ data, total: count, page: q.page, per_page: q.per_page });
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 400 });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Bad request";
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }

@@ -38,7 +38,7 @@ export default function MpesaPage() {
           </div>
           <h1 className="font-display text-2xl text-foreground mb-1">Pay with M-Pesa</h1>
           <p className="text-obsidian-steel text-sm mb-2">Total: <span className="text-gold font-semibold">{formatKES(270296)}</span></p>
-          <p className="text-obsidian-steel text-xs mb-6">Enter your M-Pesa registered phone number. You'll receive a PIN prompt.</p>
+          <p className="text-obsidian-steel text-xs mb-6">Enter your M-Pesa registered phone number. You&apos;ll receive a PIN prompt.</p>
           <Input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="0712 345 678" type="tel" className="mb-3 text-center" />
           <button onClick={initiate} className="btn-gold w-full justify-center py-3">
             Send STK Push
@@ -57,7 +57,7 @@ export default function MpesaPage() {
           <CheckCircle size={48} className="text-status-paid mx-auto mb-4" />
           <h2 className="font-display text-2xl text-foreground mb-2">Payment Confirmed!</h2>
           <p className="text-obsidian-steel text-sm mb-1">M-Pesa Ref: <span className="text-gold font-medium">PGX8K2LM9Q</span></p>
-          <p className="text-obsidian-steel text-sm mb-6">You'll receive an SMS and email confirmation shortly.</p>
+          <p className="text-obsidian-steel text-sm mb-6">You&apos;ll receive an SMS and email confirmation shortly.</p>
           <Link href="/orders"><button className="btn-gold w-full justify-center py-3">Track My Order</button></Link>
         </>)}
 

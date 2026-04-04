@@ -49,7 +49,8 @@ export async function POST(req: NextRequest) {
     const res = NextResponse.json({ data });
     res.cookies.set("vt_session_id", sessionId, { httpOnly: true, maxAge: 60 * 60 * 24 * 30 });
     return res;
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 400 });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Bad request";
+    return NextResponse.json({ error: msg }, { status: 400 });
   }
 }

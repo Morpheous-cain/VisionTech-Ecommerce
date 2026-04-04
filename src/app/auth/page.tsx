@@ -50,8 +50,8 @@ export default function AuthPage() {
         if (e) throw e;
         router.push("/account");
       }
-    } catch (e: any) {
-      setError(e.message || "Something went wrong");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Something went wrong");
     } finally {
       setLoading(false);
     }

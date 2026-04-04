@@ -16,8 +16,8 @@ import { GoldTopCard } from "@/components/ui/card";
 import type { Product } from "@/lib/types";
 
 // Lazy-load the WebGL scene — keeps initial bundle small, no SSR needed
-const HeroScene = dynamic(() => import("@/components/store/Heroscene"), {
-  
+const HeroScene = dynamic(() => import("@/components/store/HeroScene"), {
+  ssr: false,
   loading: () => (
     <div
       className="absolute inset-0"
@@ -25,7 +25,6 @@ const HeroScene = dynamic(() => import("@/components/store/Heroscene"), {
     />
   ),
 });
-
 
 // ── Demo products ─────────────────────────────────────────────────────────────
 const DEMO_PRODUCTS: Product[] = [
@@ -173,7 +172,7 @@ export default function HomePage() {
             Shop by Category
           </h2>
           <p className="text-obsidian-steel text-sm sm:text-base">
-            Find exactly what you're looking for
+            Find exactly what you&apos;re looking for
           </p>
         </div>
         {/* 1 col mobile → 3 col sm+ */}
@@ -254,7 +253,7 @@ export default function HomePage() {
               Why Shop at VisionTech?
             </h2>
             <p className="text-obsidian-steel text-sm sm:text-base">
-              Nairobi's most trusted electronics retailer
+              Nairobi&apos;s most trusted electronics retailer
             </p>
           </div>
           {/* 2 col mobile → 4 col lg */}

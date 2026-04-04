@@ -45,7 +45,8 @@ export async function POST(req: NextRequest) {
 
     const stkData = await stkRes.json();
     return NextResponse.json({ data: stkData });
-  } catch (e: any) {
-    return NextResponse.json({ error: e.message }, { status: 500 });
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : "Internal server error";
+    return NextResponse.json({ error: msg }, { status: 500 });
   }
 }

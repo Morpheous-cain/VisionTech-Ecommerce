@@ -35,14 +35,14 @@ function SearchResults() {
           <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-obsidian-steel" />
           <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search phones, laptops, accessories..." className="pl-9" autoFocus />
         </div>
-        {q && <p className="text-obsidian-steel text-sm mt-2">{results.length} result{results.length !== 1 ? "s" : ""} for "{q}"</p>}
+        {q && <p className="text-obsidian-steel text-sm mt-2">{results.length} result{results.length !== 1 ? "s" : ""} for &ldquo;{q}&rdquo;</p>}
       </div>
       {results.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {results.map((p) => <ProductCard key={p.id} product={p} />)}
         </div>
       ) : q ? (
-        <div className="text-center py-16 text-obsidian-steel"><p className="text-4xl mb-4">🔍</p><p className="font-display text-xl">No results for "{q}"</p><p className="text-sm mt-1">Try a different search term</p></div>
+        <div className="text-center py-16 text-obsidian-steel"><p className="text-4xl mb-4">🔍</p><p className="font-display text-xl">No results for &ldquo;{q}&rdquo;</p><p className="text-sm mt-1">Try a different search term</p></div>
       ) : null}
     </div>
   );
