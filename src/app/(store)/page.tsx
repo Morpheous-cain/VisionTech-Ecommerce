@@ -16,7 +16,7 @@ import { GoldTopCard } from "@/components/ui/card";
 import type { Product } from "@/lib/types";
 
 // Lazy-load the WebGL scene — keeps initial bundle small, no SSR needed
-const HeroScene = dynamic(() => import("@/components/store/HeroScene"), {
+const HeroScene = dynamic(() => import("./components/store/HeroScene"), {
   loading: () => (
     <div
       className="absolute inset-0"
