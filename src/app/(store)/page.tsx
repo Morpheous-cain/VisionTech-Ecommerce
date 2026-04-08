@@ -17,7 +17,6 @@ import type { Product } from "@/lib/types";
 
 // Lazy-load the WebGL scene — keeps initial bundle small, no SSR needed
 const HeroScene = dynamic(() => import("@/components/store/HeroScene"), {
-  ssr: false,
   loading: () => (
     <div
       className="absolute inset-0"
